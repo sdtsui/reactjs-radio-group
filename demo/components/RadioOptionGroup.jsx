@@ -9,7 +9,9 @@ var RadioOptionGroup = React.createClass({
             </RadioOption>
             );
           })}
-            <RadioOtherOption/>
+          
+          {this.props.other && <RadioOtherOption/>}
+            
         </div>
       );
 
