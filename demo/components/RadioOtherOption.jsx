@@ -6,6 +6,7 @@ var RadioOtherOption = React.createClass({
   },
 
   onChange: function (event) {
+    console.log('radioOtherOption event :', event);
     var input = event.target;
 
     console.log(event, input);
@@ -14,12 +15,25 @@ var RadioOtherOption = React.createClass({
     });
 
   },
+  componentDidUpdate: function (prevProps, prevState) {
+    //summary:
+    //  uses getDomNode to get 
+    //  uses componentDidUpdate, previousState
+    //  forceUpdate...not recommended
+    //  refs: look at parts of components
+    var input = this.refs.input.getDOMNode();
 
+    if (prevState.checked !== input.checked) {
+      this.setState({
+        checked: input.checked
+      });
+    }
+  },
   render: function() {
     return (
       <p className="form-group radio">
         <label>
-          <input onChange={this.onChange} type="radio" name="referrer" value="other"/>
+          <input ref="input" onChange={this.onChange} type="radio" name="referrer" value="other"/>
           Other
         </label>
 
