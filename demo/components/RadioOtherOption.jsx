@@ -24,7 +24,8 @@ var RadioOtherOption = React.createClass({
     //  uses componentDidUpdate, previousState
     //  forceUpdate...not recommended
     //  refs: look at parts of components
-    var input = this.refs.input.getDOMNode();
+    var input = this.refs.input;//now only DOM nodes
+      //0.14.2
 
     if (prevState.checked !== input.checked) {
       this.setState({

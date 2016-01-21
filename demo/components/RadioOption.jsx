@@ -1,17 +1,17 @@
-var RadioOption = React.createClass({
-  //throws warnings, for reusability
-  propTypes: {
-    value: React.PropTypes.string.isRequired,
-    children: React.PropTypes.node
-  },
-  render : function () {
+//stateless component.
+//  no props, only render.
+var RadioOption = function (props) {
     return (
       <p className="radio">
         <label>
-          <input type="radio" name={this.props.name} value={this.props.value}/>
-          {this.props.children}
+          <input type="radio" name={props.name} value={props.value}/>
+          {props.children}
         </label>
       </p>
       );
-  }
-})
+  };
+
+RadioOption.propTypes = {
+  value: React.PropTypes.string.isRequired,
+  children: React.PropTypes.node
+};

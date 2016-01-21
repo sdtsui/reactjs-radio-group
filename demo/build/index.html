@@ -7,16 +7,21 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 </head>
 <body>
-  <script src="https://fb.me/react-0.12.2.min.js"></script>
+  <!-- Consider: Webpack, Browserify -->
+  <!-- Substitute copiling phase. Or Grunt/Gulp -->
+
+  <script src="https://fb.me/react-0.14.2.min.js"></script>
+  <script src="https://fb.me/react-dom-0.14.2.min.js"></script>
+
   <script src="Demo.js"></script>
   <script src="RadioOption.js"></script>
   <script src="RadioOtherOption.js"></script>
   <script src="RadioOptionGroup.js"></script>
 
-
+  <div id="demo"></div>
   <script>
     var demo = React.createElement(Demo);
-    React.render(demo, document.body);
+    ReactDOM.render(demo, document.getElementById('demo'));
   </script>
 </body>
 </html>

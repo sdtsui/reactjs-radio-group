@@ -1,6 +1,12 @@
 // create component
 //  createClass, render method
 //    returns HTML
+//    
+//Optional: presentational components:
+//  
+// function Demo (props) {
+  
+// }
 var Demo = React.createClass({
   //mandatory for react components
   render: function () {
@@ -16,7 +22,7 @@ var Demo = React.createClass({
     return (
       //className, reserved word
       <div className="container">
-        <h1>React.js Radio Group Demo</h1>
+        <h1>React.js Radio Group Demo v0.14</h1>
         
         <form>
           <p className="h3">How did you hear about us?</p>
